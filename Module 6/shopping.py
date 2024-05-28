@@ -7,7 +7,7 @@ class ItemToPurchase:
         self.item_description = item_description
     
     def print_item_cost(self):
-        print(self.item_name, self.item_quantity, "@", "$"+str(self.item_price), "=", "$"+str(self.item_price*self.item_quantity))
+        print(self.item_name, self.item_quantity, "@", "${:.2f}".format(self.item_price), "=", "${:.2f}".format(self.item_price*self.item_quantity))
     
 class ShoppingCart:
     
@@ -66,7 +66,7 @@ class ShoppingCart:
         for each in self.cart_items:
             each.print_item_cost()
             
-        print("Total:", self.get_cost_of_cart())
+        print("Total:", "${:.2f}".format(self.get_cost_of_cart()))
         
     def print_descriptions(self):
         print(self.customer_name+"'s", "Shopping Cart-", self.current_date)
