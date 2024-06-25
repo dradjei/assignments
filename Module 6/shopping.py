@@ -114,6 +114,7 @@ if __name__ == "__main__":
     customerName = input("Enter Customer Name: ")
     currentDate = input("Enter Current Date: ")
     
+    
     cart = ShoppingCart(customerName, currentDate)
     printMenu(cart)
             
